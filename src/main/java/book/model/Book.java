@@ -1,15 +1,15 @@
 package book.model;
 
 public class Book {
-	private String Book_id;
+	private int Book_id;
 	private String Book_name;
 	private String Author;
 	private int count;
 	
-	public String getBook_id() {
+	public int getBook_id() {
 		return Book_id;
 	}
-	public void setBook_id(String book_id) {
+	public void setBook_id(int book_id) {
 		Book_id = book_id;
 	}
 	public String getBook_name() {

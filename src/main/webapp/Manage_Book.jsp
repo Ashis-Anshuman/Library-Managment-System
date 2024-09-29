@@ -30,17 +30,24 @@
             <button id="updateBookBtn" class="btn">Update Book</button>
             <button id="showBooksBtn" class="btn">Show Books</button>
         </div>
+        <%
+				String message=(String)request.getAttribute("message");
+				if(message!=null){
+					out.print(message);
+				}
+			%>
 
         <!-- Add Book Section -->
         <div id="addBookSection" class="section" style="display: none;">
             <h2>Add Book</h2>
-            <form action="" method="post">
+            <form action="AddBook" method="post">
                 <input type="number" placeholder="Enter Book ID" name="bookid" required>
                 <input type="text" placeholder="Enter Book Name" name="bookname" required>
                 <input type="text" placeholder="Enter Author Name" name="author" required>
                 <input type="number" placeholder="Enter how many books" name="count" required>
                 <input type="submit" value="Add Book" class="btn">
             </form>
+            
         </div>
 
         <!-- Delete Book Section -->
