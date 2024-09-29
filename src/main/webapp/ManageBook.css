@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
     margin: 0;
     padding: 0;
@@ -12,13 +11,13 @@ body {
 
 header {
     background-color: #333;
-    color: #30d176;
     padding: 15px 0;
     text-align: center;
 }
 
 header .logo h1 {
     margin: 0;
+    color: #30d176;
 }
 
 nav ul {
@@ -43,36 +42,102 @@ nav ul li a:hover{
     background-color: #1be885;
     padding: 8px;
     border-radius: 10px;
-    color:black;   
+    color:black; 
+    transition: 0.3s;  
 }
 
-.Student_info {
-	margin-top:100px;
-	margin-left:50px;
-	max-width:550px;
-	border:2px solid black;
-	padding: 30px;
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
-label{
-	width: 170px;
-	display: inline-block;
-	margin-top: 40px;
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.Student_info input{
-	height:25px;
-	width: 200px;
+.button-group {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.Student_info select{
-	height:25px;
-	width: 200px;
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
 }
 
-.Student_info .add{
-	margin-top:20px;
-	margin-left: 150px;
-	width: 100px;
+.btn:hover {
+    background-color: #1be885;
+    color: #333;
+    transition: 0.4s;
+}
+
+.section {
+    margin-bottom: 40px;
+    display: none;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 22px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input[type="text"],
+form input[type="submit"],
+form input[type="number"]
+ {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #1be885;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f9;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
