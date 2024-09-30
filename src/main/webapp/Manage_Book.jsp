@@ -1,3 +1,6 @@
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
+<%@page import="book.model.Book"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -30,12 +33,15 @@
             <button id="updateBookBtn" class="btn">Update Book</button>
             <button id="showBooksBtn" class="btn">Show Books</button>
         </div>
+        <div id="message">
         <%
 				String message=(String)request.getAttribute("message");
 				if(message!=null){
 					out.print(message);
 				}
 			%>
+        </div>
+        
 
         <!-- Add Book Section -->
         <div id="addBookSection" class="section" style="display: none;">
@@ -72,27 +78,40 @@
         </div>
 
         <!-- Show Books Section -->
-        <div id="showBooksSection" class="section" style="display: none;">
+        <div id="showBooksSection" class="section" style="display: block;">
             <h2>List of Books</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Title</th>
+                        <th>Book Id</th>
+                        <th>Book Name</th>
                         <th>Author</th>
-                        <th>ISBN</th>
+                        <th>Book available</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Book 1</td>
-                        <td>Author 1</td>
-                        <td>12345</td>
-                    </tr>
-                    <tr>
-                        <td>Book 2</td>
-                        <td>Author 2</td>
-                        <td>67890</td>
-                    </tr>
+                    <%List<Book> booklist=(List<Book>)request.getAttribute("list");
+                    	if(booklist != null){
+                    		for (Book book : booklist){
+                    		%>
+                    			<tr>
+                    				<td><%out.println(book.getBook_id()); %></td>
+                    				<td><%out.println(book.getBook_name()); %></td>
+                    				<td><%out.println(book.getAuthor()); %></td>
+                    				<td><%out.println(book.getCount()); %></td>
+                    			</tr>
+                    			
+                    			
+                    		<% }
+                    	}else{%>
+                    	
+                    	<tr>
+                    		<td colspan="4" style="text-align: center;">No result found</td>
+                    	</tr>
+                    		
+                    	<%}
+                    
+                    %>
                 </tbody>
             </table>
         </div>
@@ -109,17 +128,19 @@
         const deleteBookSection = document.getElementById('deleteBookSection');
         const updateBookSection = document.getElementById('updateBookSection');
         const showBooksSection = document.getElementById('showBooksSection');
+        const hideMessage = document.getElementById('message');
 
         function hideAllSections() {
             addBookSection.style.display = 'none';
             deleteBookSection.style.display = 'none';
             updateBookSection.style.display = 'none';
             showBooksSection.style.display = 'none';
+            hideMessage.style.display='none';
         }
 
         addBookBtn.addEventListener('click', function() {
             hideAllSections();
-            addBookSection.style.display = 'block';
+            addBookSection.style.display = 'block';   
         });
 
         deleteBookBtn.addEventListener('click', function() {
@@ -134,6 +155,7 @@
 
         showBooksBtn.addEventListener('click', function() {
             hideAllSections();
+            window.location.href = 'ShowBook';
             showBooksSection.style.display = 'block';
         });
 
