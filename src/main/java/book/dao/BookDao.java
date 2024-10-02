@@ -46,6 +46,46 @@ public class BookDao {
 		
 	}
 	
+	public boolean updateBook(Book book) {
+		boolean flag=false;
+		try {
+			con=DriverManager.getConnection(url,user,password);
+			st=con.prepareStatement("update book set book_name=?,author=?,count=? where book_id=?");
+			st.setString(1, book.getBook_name());
+			st.setString(2, book.getAuthor());
+			st.setInt(3, book.getCount());
+			st.setInt(4, book.getBook_id());
+			if(st.executeUpdate()==1) {
+				flag=true;
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}finally {
+			try {
+				st.close();
+				con.close();
+			} catch (Exception e2) {
+				// TODO: handle exception
+			}
+		}
+		return flag;
+	}
+	
+	public boolean deleteBook(Book book) {
+		boolean flag = false;
+		try {
+			con=DriverManager.getConnection(url,user,password);
+			st=con.prepareStatement("delete from book where book_id=?");
+			st.setInt(1, book.getBook_id());
+			if(st.executeUpdate()==1) {
+				flag = true;
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return flag;
+	}
 	
 	public List<Book> retriveBookData(){
 		List<Book> bookList=null;

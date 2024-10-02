@@ -36,9 +36,9 @@
         <div id="message">
         <%
 				String message=(String)request.getAttribute("message");
-				if(message!=null){
-					out.print(message);
-				}
+				if(message!=null){%>
+					<p><% out.print(message);%></p>
+				<%}
 			%>
         </div>
         
@@ -59,8 +59,8 @@
         <!-- Delete Book Section -->
         <div id="deleteBookSection" class="section" style="display: none;">
             <h2>Delete Book</h2>
-            <form>
-                <input type="text" placeholder="Enter Book ID" name="bookid" required>
+            <form action="DeleteBook" method="post">
+                <input type="number" placeholder="Enter Book ID" name="bookid" required>
                 <input type="submit" value="Delete Book" class="btn">
             </form>
         </div>
@@ -68,7 +68,7 @@
         <!-- Update Book Section -->
         <div id="updateBookSection" class="section" style="display: none;">
             <h2>Update Book</h2>
-            <form>
+            <form action="UpdateBook" method="post">
                 <input type="text" placeholder="Book Id" name="bookid" required>
                 <input type="text" placeholder="New Title" name="bookname">
                 <input type="text" placeholder="New Author" name="author">
