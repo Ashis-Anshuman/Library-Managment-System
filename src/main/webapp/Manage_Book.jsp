@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="./Home.jsp">Home</a></li>
                 <li><a href="#">Books</a></li>
-                <li><a href="./Manage_Students.jsp">Students</a></li>
+                <li><a href="student.jsp">Students</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
