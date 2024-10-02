@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="Home.jsp">Home</a></li>
                 <li><a href="Manage_Book.jsp">Books</a></li>
-                <li><a href="#">Students</a></li>
+                <li><a href="student.jsp">Students</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
@@ -38,7 +38,7 @@
 	        </div>
         </div>
         <div class="feature">
-            <h3>Manage Students</h3>
+            <a href="student.jsp" class=""><h3>Manage Students</h3></a>
             <p>Easily add, update, and manage student records.</p>
         </div>
         <div class="feature">

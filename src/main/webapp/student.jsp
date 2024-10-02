@@ -10,7 +10,20 @@
 <link rel="stylesheet" href="student.css">
 </head>
 <body>
-    <div class="navbar">
+	<header>
+        <div class="logo">
+            <h1>Library Management System</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Home.jsp">Home</a></li>
+                <li><a href="Manage_Book.jsp">Books</a></li>
+                <li><a href="student.jsp">Students</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="navBar">
         <!-- These are the buttons for navigation -->
         <button onclick="showContent('addStudent')">Add Student</button>
         <button onclick="showContent('updateStudent')">Update Student</button>
