@@ -87,5 +87,43 @@ public class studentDao {
 		return flag;
 		
 	}
+
+//	student update ********************************************************************************************
+	public boolean updateStudent(StudentModel sm) {
+		boolean flag=false;
+		Connection con=null;
+		PreparedStatement st=null;
+		try {
+			con=studentDao.getConnection();
+			st=con.prepareStatement("update studentinfo set stud_name=?,stud_branch=?,stud_email=? where stud_id=?");
+			st.setString(1, sm.getName());
+			st.setString(2, sm.getBranch());
+			st.setString(3, sm.getEmail());
+			st.setInt(4,sm.getId());
+			if(st.executeUpdate()==1) {
+				flag=true;
+			}
+			
+		}catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}finally {
+			try {
+				st.close();
+				con.close();
+				
+			} catch (Exception e2) {
+				// TODO: handle exception
+			}
+		}
+		
+		return flag;
+		
+		}
+	}
 	
-}
+		
+	
+	
+	
+

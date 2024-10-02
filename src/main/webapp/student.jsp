@@ -55,7 +55,7 @@
         <div id="updateStudent" class="content">
             <div class="formContainer">
                 <h2>Update Student</h2>
-                <form action="addStudentController" method="post">
+                <form action="updateStudent" method="post">
                     <label for="id">Student ID :</label>
                     <input type="number" id="id" name="id"><br>
                     <label  for="name">New Name:</label>
