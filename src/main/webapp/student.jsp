@@ -74,7 +74,7 @@
         <div id="deleteStudent" class="content">
             <div class="formContainer">
                 <h2>Delete Student</h2>
-                <form>
+                <form action="deletStudent" method="post">
                     <label for="id">Student ID:</label>
                     <input type="text" id="id" name="id"><br>
                     <input type="submit" value="Delete Student">
