@@ -120,7 +120,38 @@ public class studentDao {
 		return flag;
 		
 		}
-	}
+
+//	this is the sectio for  the delet data 
+	public boolean deletStudent(StudentModel sm) {
+		boolean flag=false;
+		Connection con=null;
+		PreparedStatement st=null;
+		try {
+			con=studentDao.getConnection();
+			st=con.prepareStatement("delete from studentinfo where stud_id=? ");
+			st.setInt(1,sm.getId());
+			if(st.executeUpdate()==1) {
+				flag=true;
+			}
+			
+		}catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}finally {
+			try {
+				st.close();
+				con.close();
+				
+			} catch (Exception e2) {
+				// TODO: handle exception
+			}
+		}
+		
+		
+		
+		return flag;
+		}
+}
 	
 		
 	
