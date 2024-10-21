@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Sign Up Form by Colorlib</title>
+<title>Library Management System</title>
 
 <!-- Font Icon -->
 <link rel="stylesheet"
@@ -26,7 +26,7 @@
 					<div class="signup-form">
 						<h2 class="form-title">Sign up</h2>
 					
-							id="register-form">
+							<form method = "post" action = "register" class = "register-form" id = "register-form">
 							<div class="form-group">
 								<label for="name"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
@@ -65,7 +65,7 @@
 					</div>
 					<div class="signup-image">
 						<figure>
-							<img src="images/signup-image.jpg" alt="sing up image">
+							<img src="images/signup.png" alt="sing up image">
 						</figure>
 						<a href="login.jsp" class="signup-image-link">I am already
 							member</a>

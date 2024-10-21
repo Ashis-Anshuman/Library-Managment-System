@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Sign Up Form by Colorlib</title>
+<title>Library Management System</title>
 
 <!-- Font Icon -->
 <link rel="stylesheet"
@@ -25,7 +25,7 @@
 				<div class="signin-content">
 					<div class="signin-image">
 						<figure>
-							<img src="images/signin-image.jpg" alt="sing up image">
+							<img src="images/signin.png" alt="sing up image">
 						</figure>
 						<a href="registration.jsp" class="signup-image-link">Create an
 							account</a>
@@ -39,7 +39,7 @@
 								<label for="username"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
 									type="text" name="username" id="username"
-									placeholder="Your Name" />
+									placeholder="Your email" />
 							</div>
 							<div class="form-group">
 								<label for="password"><i class="zmdi zmdi-lock"></i></label> <input
@@ -79,7 +79,7 @@
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<link rel="stylesheet" href="alert/dist/sweetalert.css">
+	<link rel = "stylesheet" href = "alert/dist/sweetalert.css">
 	
 	<script type="text/javascript">
 	
@@ -90,5 +90,5 @@
 	
 	</script>
 </body>
-<!-- This templates was made by Colorlib (https://colorlib.com) -->
+
 </html>
