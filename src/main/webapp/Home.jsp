@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Library Management System</title>
 <link rel="stylesheet" href="homecss.css">
 </head>
 <body>
@@ -42,7 +42,7 @@
             <p>Easily add, update, and manage student records.</p>
         </div>
         <div class="feature">
-            <h3>View History</h3>
+            <a href="#"><h3>View History</h3></a>
             <p>Check borrowing history and overdue books.</p>
         </div>
       
@@ -52,13 +52,13 @@
 
         <div class="feature">
 	        <div class="manage">
-	            <a href="Manage_Book.jsp" class=""><h3>Manage Books</h3></a>
-	            <p>Easily add, update, and manage books in the library.</p>
+	            <a href="#" class=""><h3>Issue Book</h3></a>
+	            <p>Easily allocate book to students.</p>
 	        </div>
         </div>
         <div class="feature">
-            <h3>Manage Students</h3>
-            <p>Easily add, update, and manage student records.</p>
+            <a href="#"><h3>Return Book</h3></a>
+            <p>Return book which is allocated to student </p>
         </div>
       
         

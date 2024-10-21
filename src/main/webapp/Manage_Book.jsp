@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Library Management System</title>
 <link rel="stylesheet" href="ManageBook.css">
 </head>
 <body>
