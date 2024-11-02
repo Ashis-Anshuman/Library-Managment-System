@@ -42,7 +42,7 @@
             <p>Easily add, update, and manage student records.</p>
         </div>
         <div class="feature">
-            <a href="#"><h3>View History</h3></a>
+            <a href="History.jsp"><h3>View History</h3></a>
             <p>Check borrowing history and overdue books.</p>
         </div>
       
@@ -52,7 +52,7 @@
 
         <div class="feature">
 	        <div class="manage">
-	            <a href="#" class=""><h3>Issue Book</h3></a>
+	            <a href="issuebook.jsp" class=""><h3>Issue Book</h3></a>
 	            <p>Easily allocate book to students.</p>
 	        </div>
         </div>

@@ -13,7 +13,7 @@ import book.model.Book;
 public class BookDao {
 	Connection con=null;
 	PreparedStatement st=null;
-	String url="jdbc:mysql://localhost:3306/library-managment";
+	String url="jdbc:mysql://192.168.243.38:3306/library-managment";
 	String user="root";
 	String password="Ashis@(2004)";
 	
@@ -94,6 +94,7 @@ public class BookDao {
 			st=con.prepareStatement("select * from book");
 			ResultSet rs=st.executeQuery();
 			bookList= new ArrayList<>();
+			
 			while(rs.next()) {
 				Book book = new Book();
 				book.setBook_id(rs.getInt("book_id"));
