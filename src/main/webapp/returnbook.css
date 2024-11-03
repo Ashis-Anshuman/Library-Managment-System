@@ -1,0 +1,153 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    color: #30d176;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    background-color: #1be885;
+    padding: 8px;
+    border-radius: 10px;
+    color:black; 
+    transition: 0.3s;  
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 80px auto;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.issued-details, .return-book {
+    width: 50%;
+    padding: 20px;
+}
+
+.issued-details {
+    background-color: #67766b;
+    color: #fff;
+}
+
+.return-book {
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+.header h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.details {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.details p {
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #1be885;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.find-btn  {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+}
+.return-btn{
+	padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+}
+
+.find-btn {
+    background-color: #556cd6;
+}
+
+.return-btn {
+    background-color: #f74c4c;
+    margin-top: 5px;
+}
+.find-btn:hover {
+    background-color: #455acb;
+}
+
+.return-btn:hover {
+    background-color: #e14141;
+}
