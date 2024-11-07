@@ -50,7 +50,7 @@ public class addStudentController extends HttpServlet {
         	request.setAttribute("alert", "added scussfully");
         }else {
         	request.setAttribute("alert", "not added");
-        	System.out.println("hdjfhdskfhs");
+        	System.out.println("Data was not added their ia an issue with it");
         }
        
 		

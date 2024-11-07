@@ -15,7 +15,7 @@ import student.model.StudentModel;
 public class studentDao {
 	public static Connection getConnection() throws SQLException, ClassNotFoundException {
 	    Class.forName("com.mysql.jdbc.Driver");  // Load JDBC driver
-	    return DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbcconnection", "root", "Krishna@123");
+	    return DriverManager.getConnection("jdbc:mysql://192.168.48.38:3306/library-managment", "krishna", "password123");
 	}
 //	this is the section for the student data featching**********************************************************************************
 	public List<StudentModel> fetchAllStudent(){
