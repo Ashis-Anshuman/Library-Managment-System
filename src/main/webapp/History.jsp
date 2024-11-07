@@ -1,3 +1,6 @@
+<%@page import="java.util.Collections"%>
+<%@page import="com.mysql.cj.x.protobuf.MysqlxCrud.Collection"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="history.model.HistorryModel"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -43,7 +46,9 @@
             <tbody>
             <%List<HistorryModel> list = (List<HistorryModel>)request.getAttribute("list"); 
             if(list != null){
-                    		for (HistorryModel hm : list){
+            	List<HistorryModel> revlist = new ArrayList<>(list);
+            	Collections.reverse(revlist);
+                    		for (HistorryModel hm : revlist){
                     		%>
                     			<tr>
                     				<td><%out.println(hm.getIssue_id()); %></td>

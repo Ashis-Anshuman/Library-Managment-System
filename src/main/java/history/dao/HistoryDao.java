@@ -16,7 +16,7 @@ public class HistoryDao {
 		ResultSet rs = null;
 		PreparedStatement st = null;
 		try {
-			con= DriverManager.getConnection("jdbc:mysql://192.168.243.38:3306/library-managment" , "root", "Ashis@(2004)");
+			con= DriverManager.getConnection("jdbc:mysql://192.168.48.38:3306/library-managment" , "root", "Ashis@(2004)");
 			st=con.prepareStatement("select * from issuebook");
 			rs =st.executeQuery();
 			list= new ArrayList<>();
