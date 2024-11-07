@@ -13,9 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class RegistrationServlet
- */
+
 @WebServlet("/register")
 public class RegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -31,7 +29,7 @@ public class RegistrationServlet extends HttpServlet {
 	Connection con = null;
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
-		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/coll","root","Sourab2@");
+		con = DriverManager.getConnection("jdbc:mysql://192.168.48.38:3306/library-managment","sourab","password123");
 		PreparedStatement pst = con.prepareStatement("insert into users(uname,uemail,upwd,umobile) values(?,?,?,?)");
 		pst.setString(1,uname);
 		pst.setString(2,uemail);

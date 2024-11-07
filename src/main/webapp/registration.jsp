@@ -6,12 +6,15 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Library Management System</title>
 
-<!-- Font Icon -->
+
 <link rel="stylesheet"
 	href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
-<!-- Main css -->
+
 <link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
 	
@@ -19,7 +22,7 @@
 
 	<div class="main">
 
-		<!-- Sign up form -->
+		
 		<section class="signup">
 			<div class="container">
 				<div class="signup-content">
@@ -76,23 +79,17 @@
 
 
 	</div>
-	<!-- JS -->
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<link rel="stylesheet" href="alert/dist/sweetalert.css">
 	
 	<script type="text/javascript">
-	
-	var status = document.getElementById("status").value;
-	if(status == "success"{
-		swal("Congrats","Account Created Successfully","Success");
-	})
-	
-	</script>
+    var status = document.getElementById("status").value;
+    if (status === "success") {
+        swal("Congrats", "Account Created Successfully", "success");
+    }
+</script>
+
 
 
 
 </body>
-<!-- This templates was made by Colorlib (https://colorlib.com) -->
+
 </html>
