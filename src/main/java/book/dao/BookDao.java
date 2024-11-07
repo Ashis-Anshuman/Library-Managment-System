@@ -4,18 +4,22 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 import book.model.Book;
+import returnbook.model.ReturnBook;
 
 public class BookDao {
 	Connection con=null;
 	PreparedStatement st=null;
-	String url="jdbc:mysql://192.168.243.38:3306/library-managment";
+	ResultSet rs= null;
+	String url="jdbc:mysql://192.168.48.38:3306/library-managment";
 	String user="root";
 	String password="Ashis@(2004)";
+	
 	
 	public boolean addbook(Book book) {
 		boolean flag=false;
@@ -92,7 +96,7 @@ public class BookDao {
 		try {
 			con=DriverManager.getConnection(url,user,password);
 			st=con.prepareStatement("select * from book");
-			ResultSet rs=st.executeQuery();
+			rs=st.executeQuery();
 			bookList= new ArrayList<>();
 			
 			while(rs.next()) {
@@ -110,4 +114,5 @@ public class BookDao {
 		
 		return bookList;
 	}
+	
 }
