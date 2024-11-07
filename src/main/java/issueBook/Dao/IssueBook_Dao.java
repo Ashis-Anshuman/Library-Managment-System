@@ -15,7 +15,8 @@ public class IssueBook_Dao {
 		Connection con=null;
 		PreparedStatement st=null;
 		try {
-			con=DriverManager.getConnection("jdbc:mysql://192.168.86.38:3306/library_managment","siba","password123");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			con=DriverManager.getConnection("jdbc:mysql://192.168.48.38:3306/library-managment","siba","password123");
 			st=con.prepareStatement("select * from book where book_id=?");
 			System.out.println(issue.getBook_id());
 			st.setInt(1, issue.getBook_id());
@@ -46,6 +47,9 @@ public class IssueBook_Dao {
 		}
 		catch (SQLException e) {
 			// TODO: handle exception
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return flag;
